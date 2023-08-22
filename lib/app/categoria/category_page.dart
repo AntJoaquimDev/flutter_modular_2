@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+
+import 'model/category-controller.dart';
 
 class CategoryPage extends StatefulWidget {
   final String? category;
@@ -22,10 +25,23 @@ class _CategoryPageState extends State<CategoryPage> {
         ),
       ),
       body: Center(
-        child: Text(
-          widget.category ?? 'Categoria não envianda.',
-          style: const TextStyle(
-              fontSize: 24, fontWeight: FontWeight.bold, color: Colors.blue),
+        child: Column(
+          children: [
+            Text(
+              widget.category ?? 'Categoria não envianda.',
+              style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue),
+            ),
+            TextButton(
+              onPressed: () {
+                var controller = Modular.get<CategoryController>();
+                print('Controller Hassh ${controller.hashCode}');
+              },
+              child: const Text('Get Controller'),
+            ),
+          ],
         ),
       ),
     );

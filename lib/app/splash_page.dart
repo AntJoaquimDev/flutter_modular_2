@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_modular_2/app/categoria/model/category-controller.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
