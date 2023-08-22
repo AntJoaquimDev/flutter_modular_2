@@ -14,11 +14,18 @@ class SplashPage extends StatelessWidget {
         child: Column(
           children: [
             TextButton(
-                onPressed: () {
-                  Modular.to.pushNamed('/category',
-                      arguments: 'Categoria de Preços@@@');
-                },
-                child: const Text('Categoria Page'))
+              onPressed: () {
+                Modular.to.pushNamed('/category',
+                    arguments: 'Categoria de Preços@@@');
+              },
+              child: const Text('Categoria Page'),
+            ),
+            TextButton(
+              onPressed: () {
+                Modular.to.pushNamed('/product/produto_:Arroz');
+              },
+              child: const Text('Produto Page'),
+            ),
           ],
         ),
       ),
